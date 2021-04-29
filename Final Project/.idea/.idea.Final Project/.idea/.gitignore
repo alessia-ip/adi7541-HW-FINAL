@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/contentModel.xml
+/.idea.Final Project.iml
+/modules.xml
+# Datasource local storage ignored files
+/../../../../../../../../../../:\Users\Alessia\Desktop\CodeLab1_2021\adi7541-HW-FINAL\Final Project\.idea\.idea.Final Project\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
