@@ -5,6 +5,7 @@ using System.ComponentModel.Design.Serialization;
 using System.Numerics;
 using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
@@ -55,7 +56,7 @@ public class GameManager : MonoBehaviour
     public LogManager _LogManager;
     public GameObject logCanvas;
     
-    private List<LogScriptableObjects> listOfAllLogs;
+    public List<LogScriptableObjects> listOfAllLogs;
     
     void Start()
     {
@@ -130,6 +131,12 @@ public class GameManager : MonoBehaviour
 
                     newStar.GetComponent<NebulaLog>().alreadyRead = true;
                     
+                }
+                else
+                {
+                    var assignedLogNum = Random.Range(0, listOfAllLogs.Count - 1);
+                    newStar.GetComponent<NebulaLog>().logDate = listOfAllLogs[assignedLogNum];
+                    listOfAllLogs.RemoveAt(assignedLogNum);
                 }
                 
             }

@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a6e273d6f224ca4eb13c9ca57d0eaa6, type: 3}
-  m_Name: Log_2
+  m_Name: Log_26
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: The ship here is not the one we were looking for. Instead, I seem to have
-    come across a luxury yacht starline cruiser. NEWLINE NEWLINE Very large. Very
-    sturdy. Not as nimble as mine though. I'll stick with what I've got.
+  logText: 
