@@ -2,8 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
+using System.Numerics;
 using Unity.Mathematics;
 using UnityEngine;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 [System.Serializable] 
 public class GameManager : MonoBehaviour
@@ -38,7 +41,14 @@ public class GameManager : MonoBehaviour
 
     private GameObject xPosTracker;
     private GameObject yPosTracker;
-    
+
+    private bool shipInMotion = false;
+    private bool yBetter = false;
+    private bool isAngled = false;
+    private bool atTracker = false;
+    private Vector2 velocity = Vector2.zero;
+    private float travelSpeed = 0.3f;
+
     void Start()
     {
 
@@ -116,9 +126,20 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        GetNewGridPosition();
+        if (shipInMotion == false)
+        {
+            GetNewGridPosition();
+            MoveShipTrigger();
+            
+        }
+        else
+        {
+            MoveShip();
+        }
+
     }
 
+    //function used to navigate the grid of stars/nebulas
     void GetNewGridPosition()
     {
         
@@ -183,15 +204,21 @@ public class GameManager : MonoBehaviour
             if (Mathf.Abs(reticlePos.x - playerPos.x) > Mathf.Abs(reticlePos.y - playerPos.y))
             {
                 middlePos = xPosTracker.transform.position;
+                yBetter = false;
+                isAngled = true;
             }
             else
             {
                 middlePos = yPosTracker.transform.position;
+                yBetter = true;
+                isAngled = true;
+
             }
         }
         else
         {
             middlePos = player.transform.position;
+            isAngled = false;
         }
 
         //this is for making the line renderer
@@ -203,6 +230,96 @@ public class GameManager : MonoBehaviour
     }
 
 
+    //making this its own function in case I have time to add juice to it. 
+    //Really want an animation and SFX
+    void MoveShipTrigger()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            atTracker = false;
+            shipInMotion = true;
+
+        }   
+    }
+
+    void MoveShip()
+    {
+        if (player.transform.position == reticle.transform.position)
+        {
+            playerPos = reticlePos;
+            xPosTracker.transform.position = player.transform.position;
+            yPosTracker.transform.position = player.transform.position;
+            atTracker = false;
+            shipInMotion = false;
+        }
+        
+        if (isAngled == false)
+        {
+            player.transform.position = Vector2.SmoothDamp(player.transform.position, reticle.transform.position, ref velocity ,travelSpeed);
+            if (Vector2.Distance(player.transform.position, reticle.transform.position) < 0.3)
+            {
+                player.transform.position = reticle.transform.position;
+            }
+        }
+        else
+        {
+            if (yBetter == true)
+            {
+                if (player.transform.position == yPosTracker.transform.position)
+                {
+                    atTracker = true;
+                }
+
+                if (atTracker == false)
+                {
+                    //Debug.Log(Vector2.Distance(player.transform.position, yPosTracker.transform.position));
+                    player.transform.position = Vector2.SmoothDamp(player.transform.position, yPosTracker.transform.position,  ref velocity,  travelSpeed);
+                    if (Vector2.Distance(player.transform.position, yPosTracker.transform.position) < 0.3)
+                    {
+                        player.transform.position = yPosTracker.transform.position;
+                    }
+                 
+                }
+                else
+                {
+                    player.transform.position = Vector2.SmoothDamp(player.transform.position, reticle.transform.position, ref velocity,travelSpeed);
+                    
+                    if (Vector2.Distance(player.transform.position, reticle.transform.position) < 0.3)
+                    {
+                        player.transform.position = reticle.transform.position;
+                    }
+                }
+            }
+            else
+            { 
+                if (player.transform.position == xPosTracker.transform.position)
+                {
+                    atTracker = true;
+                }
+
+                if (atTracker == false)
+                {
+                    player.transform.position = Vector2.SmoothDamp(player.transform.position, xPosTracker.transform.position, ref velocity, travelSpeed);
+                    if (Vector2.Distance(player.transform.position, xPosTracker.transform.position) < 0.3)
+                    {
+                        player.transform.position = xPosTracker.transform.position;
+                    }
+                }
+                else
+                {
+                    player.transform.position = Vector2.SmoothDamp(player.transform.position, reticle.transform.position,  ref velocity,travelSpeed);
+                    if (Vector2.Distance(player.transform.position, reticle.transform.position) < 0.3)
+                    {
+                        player.transform.position = reticle.transform.position;
+                    }
+                }
+            }
+        }
+
+
+    }
+    
+    
     void pathNodeAdd()
     {
         if (!pathForShip.Contains(reticlePos))
