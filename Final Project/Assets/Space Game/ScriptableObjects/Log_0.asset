@@ -10,12 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a6e273d6f224ca4eb13c9ca57d0eaa6, type: 3}
-  m_Name: LogDate_521
+  m_Name: Log_0
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: A distress signal has been detected somewhere in this quadrant. I have
-    been tasked with finding any survivors. Easier said than done. First thing's
-    first - figuring out just what star system that signal fizzled out in. NEWLINE
-    NEWLINE I've only got a handful of trips I can make. Here's hoping. NEWLINE NEWLINE
-    NEWLINE (Use the arrow keys to  plan your route, and space to choose your destination)
+  logText: No life in this system. It's a dead end. NEWLINE NEWLINE No sign of debris
+    either.

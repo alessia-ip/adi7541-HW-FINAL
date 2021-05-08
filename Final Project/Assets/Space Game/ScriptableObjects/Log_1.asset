@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6e273d6f224ca4eb13c9ca57d0eaa6, type: 3}
+  m_Name: Log_1
+  m_EditorClassIdentifier: 
+  logNumber: {fileID: 0}
+  logTitle: 'Log Date: 1-M NUM'
+  logText: No signs of the distress signal here. However, there is a very nice tropical
+    beach planet. NEWLINE NEWLINE I'll have to keep that in mind for when I next
+    get a vacation.

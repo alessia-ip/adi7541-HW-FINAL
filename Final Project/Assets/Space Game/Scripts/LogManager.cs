@@ -27,11 +27,15 @@ public class LogManager : MonoBehaviour
     {
         _GameManager.logOpen = true;
         currentLog = getLog;
-        logTitle.text = currentLog.logTitle;
+        var titletest = currentLog.logTitle.Replace("NUM", currentLog.logNumber.currentLogNumber.ToString());
+        logTitle.text = titletest;
         var bodytext = currentLog.logText.Replace("NEWLINE ", "\n");
         logBody.text = bodytext;
         logCanv.SetActive(true);
         recordtextupdate.text = recordtextupdate.text + logTitle.text + "\n" + "\n" + logBody.text + "\n" + "\n";
+        currentLog.logNumber.currentLogNumber++;
+        
+
     }
     
 }

@@ -1484,6 +1484,8 @@ MonoBehaviour:
   pathForShip: []
   GameStart: 0
   logOpen: 0
+  _LogManager: {fileID: 1001772554}
+  logCanvas: {fileID: 46325830}
 --- !u!4 &1001772551
 Transform:
   m_ObjectHideFlags: 0
@@ -1614,6 +1616,7 @@ MonoBehaviour:
   firstLog: {fileID: 1001772554}
   firstLogSO: {fileID: 11400000, guid: 9e2c9d6cb2519b04d897fc7f61f4687f, type: 2}
   recordsCanvas: {fileID: 826358}
+  logStart: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
 --- !u!114 &1001772554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1646,6 +1649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   records: {fileID: 2079531016}
   recordsText: {fileID: 1624848378}
+  _GameManager: {fileID: 1001772550}
 --- !u!1 &1194086594
 GameObject:
   m_ObjectHideFlags: 0

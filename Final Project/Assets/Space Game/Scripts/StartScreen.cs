@@ -15,6 +15,8 @@ public class StartScreen : MonoBehaviour
      public LogScriptableObjects firstLogSO;
 
      public GameObject recordsCanvas;
+
+     public LogNumberTracker logStart;
      
      public void startthegame()
      {
@@ -35,6 +37,7 @@ public class StartScreen : MonoBehaviour
      
      if (cam.orthographicSize == 26)
      {
+         logStart.currentLogNumber = 521;
          firstLog.openLog(firstLogSO);
          recordsCanvas.SetActive(true);
          _gameManager.GameStart = true;

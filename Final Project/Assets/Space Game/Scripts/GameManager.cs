@@ -52,7 +52,9 @@ public class GameManager : MonoBehaviour
     private float travelSpeed = 0.3f;
 
     public bool logOpen = true;
-
+    public LogManager _LogManager;
+    public GameObject logCanvas;
+    
     private List<LogScriptableObjects> listOfAllLogs;
     
     void Start()
@@ -125,6 +127,9 @@ public class GameManager : MonoBehaviour
 
                     xPosTracker.transform.position = player.transform.position;
                     yPosTracker.transform.position = player.transform.position;
+
+                    newStar.GetComponent<NebulaLog>().alreadyRead = true;
+                    
                 }
                 
             }
@@ -142,7 +147,7 @@ public class GameManager : MonoBehaviour
                 {
                     GetNewGridPosition();
                     MoveShipTrigger();
-            
+                    
                 }
                 else
                 {
@@ -153,6 +158,22 @@ public class GameManager : MonoBehaviour
 
     }
 
+
+    void CheckPlanetaryLog(float x, float y)
+    {
+       
+        var nebulaObj = GameObject.Find("New Star at " + x + " and " + y);
+        Debug.Log(nebulaObj.transform.position);
+        if (nebulaObj.GetComponent<NebulaLog>().alreadyRead == false)
+        {
+            logOpen = true;
+            logCanvas.SetActive(true);
+            _LogManager.openLog(nebulaObj.GetComponent<NebulaLog>().logDate);
+            nebulaObj.GetComponent<NebulaLog>().alreadyRead = true;
+        }
+        
+    }
+    
     //function used to navigate the grid of stars/nebulas
     void GetNewGridPosition()
     {
@@ -265,6 +286,7 @@ public class GameManager : MonoBehaviour
             yPosTracker.transform.position = player.transform.position;
             atTracker = false;
             shipInMotion = false;
+            CheckPlanetaryLog(playerPos.x, playerPos.y);
         }
         
         if (isAngled == false)
@@ -273,6 +295,7 @@ public class GameManager : MonoBehaviour
             if (Vector2.Distance(player.transform.position, reticle.transform.position) < 0.3)
             {
                 player.transform.position = reticle.transform.position;
+                
             }
         }
         else
@@ -291,6 +314,7 @@ public class GameManager : MonoBehaviour
                     if (Vector2.Distance(player.transform.position, yPosTracker.transform.position) < 0.3)
                     {
                         player.transform.position = yPosTracker.transform.position;
+                        
                     }
                  
                 }
