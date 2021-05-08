@@ -159,6 +159,7 @@ MonoBehaviour:
   ret: {fileID: 326605963377178223, guid: 935f96aff4960684ca76011f1c29596e, type: 3}
   playerPos: {x: 0, y: 0}
   reticlePos: {x: 0, y: 0}
+  pathForShip: []
 --- !u!4 &1001772551
 Transform:
   m_ObjectHideFlags: 0
@@ -215,6 +216,7 @@ LineRenderer:
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -223,7 +225,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.069999695
+        value: 0.20999908
         inSlope: 0
         outSlope: 0
         tangentMode: 0

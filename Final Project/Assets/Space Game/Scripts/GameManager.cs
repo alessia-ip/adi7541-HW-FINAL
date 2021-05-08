@@ -35,6 +35,9 @@ public class GameManager : MonoBehaviour
     private int height;
 
     public List<Vector2> pathForShip;
+
+    private GameObject xPosTracker;
+    private GameObject yPosTracker;
     
     void Start()
     {
@@ -93,6 +96,14 @@ public class GameManager : MonoBehaviour
                     playerPos = new Vector2(x, y);
                     reticlePos = playerPos;
                     //Debug.Log(reticlePos + " is the ret pos right now");
+
+                    xPosTracker = new GameObject();
+                    xPosTracker.name = "X Position";
+                    yPosTracker = new GameObject();
+                    yPosTracker.name = "y Position";
+
+                    xPosTracker.transform.position = player.transform.position;
+                    yPosTracker.transform.position = player.transform.position;
                 }
 
                 var newStar = Instantiate<GameObject>(nebula);
@@ -119,7 +130,6 @@ public class GameManager : MonoBehaviour
             {
 
                 reticlePos.x--;
-
 
             }
         }
@@ -153,8 +163,7 @@ public class GameManager : MonoBehaviour
             if (reticlePos.y < height - 1)
             {
                 reticlePos.y++;
-
-
+                
             }
         }
 
@@ -162,19 +171,34 @@ public class GameManager : MonoBehaviour
         //we can use the same math equation as in the instantiation to put the reticle at the new position on the grid
         //reticle.transform.position = reticlePos + gridStartPos + new Vector2(reticlePos.x * xOffset, reticlePos.y * yOffset);
         reticle.transform.position = transformedPosition(reticlePos.x, reticlePos.y);
+        xPosTracker.transform.position = new Vector2(reticle.transform.position.x, xPosTracker.transform.position.y);
+        yPosTracker.transform.position = new Vector2(yPosTracker.transform.position.x, reticle.transform.position.y);
 
 
-        if (Mathf.Abs(reticlePos.x - playerPos.x) > 1 || Mathf.Abs(reticlePos.y - playerPos.y) > 1)
+        var middlePos = new Vector3(0, 0); 
+            
+        
+        if (Mathf.Abs(reticlePos.x - playerPos.x) > 0 || Mathf.Abs(reticlePos.y - playerPos.y) > 0)
         {
-            for (int x = 0; x != Mathf.Abs(reticlePos.x); x++)
+            if (Mathf.Abs(reticlePos.x - playerPos.x) > Mathf.Abs(reticlePos.y - playerPos.y))
             {
+                middlePos = xPosTracker.transform.position;
             }
+            else
+            {
+                middlePos = yPosTracker.transform.position;
+            }
+        }
+        else
+        {
+            middlePos = player.transform.position;
         }
 
         //this is for making the line renderer
         //this is a very basic pathfinder
         _lineRenderer.SetPosition(0, transformedPosition(playerPos.x, playerPos.y));
-        _lineRenderer.SetPosition(1, transformedPosition(reticlePos.x, reticlePos.y));
+        _lineRenderer.SetPosition(1, middlePos);
+        _lineRenderer.SetPosition(2, transformedPosition(reticlePos.x, reticlePos.y));
         
     }
 
