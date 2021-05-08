@@ -52,6 +52,8 @@ public class GameManager : MonoBehaviour
     private float travelSpeed = 0.3f;
 
     public bool logOpen = true;
+
+    private List<LogScriptableObjects> listOfAllLogs;
     
     void Start()
     {
@@ -99,6 +101,11 @@ public class GameManager : MonoBehaviour
         {
             for (int x = 0; x < nebulaLayout.GetLength(0); x++)
             {
+                var newStar = Instantiate<GameObject>(nebula);
+                newStar.transform.position = new Vector2(x, y) + gridStartPos + new Vector2(x * xOffset, y * yOffset);
+                newStar.transform.parent = level.transform;
+                newStar.name = "New Star at " + x + " and " + y;
+                
                 if (nebulaLayout[x, y] == 'o')
                 {
                     var playerObj = Instantiate<GameObject>(ship);
@@ -119,11 +126,7 @@ public class GameManager : MonoBehaviour
                     xPosTracker.transform.position = player.transform.position;
                     yPosTracker.transform.position = player.transform.position;
                 }
-
-                var newStar = Instantiate<GameObject>(nebula);
-                newStar.transform.position = new Vector2(x, y) + gridStartPos + new Vector2(x * xOffset, y * yOffset);
-                newStar.transform.parent = level.transform;
-                newStar.name = "New Star at " + x + " and " + y;
+                
             }
         }
     }

@@ -13,6 +13,8 @@ public class LogManager : MonoBehaviour
     public TextMeshProUGUI logBody;
 
     public GameManager _GameManager;
+
+    public TextMeshProUGUI recordtextupdate;
     
     public void closeLog()
     {
@@ -26,13 +28,10 @@ public class LogManager : MonoBehaviour
         _GameManager.logOpen = true;
         currentLog = getLog;
         logTitle.text = currentLog.logTitle;
-        var bodytext = currentLog.logText.Replace("NEWLINE", "\n");
+        var bodytext = currentLog.logText.Replace("NEWLINE ", "\n");
         logBody.text = bodytext;
         logCanv.SetActive(true);
+        recordtextupdate.text = recordtextupdate.text + logTitle.text + "\n" + "\n" + logBody.text + "\n" + "\n";
     }
-
-    public void reviewLog()
-    {
-        
-    }
+    
 }

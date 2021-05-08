@@ -13,6 +13,8 @@ public class StartScreen : MonoBehaviour
      private bool start = false;
 
      public LogScriptableObjects firstLogSO;
+
+     public GameObject recordsCanvas;
      
      public void startthegame()
      {
@@ -34,6 +36,7 @@ public class StartScreen : MonoBehaviour
      if (cam.orthographicSize == 26)
      {
          firstLog.openLog(firstLogSO);
+         recordsCanvas.SetActive(true);
          _gameManager.GameStart = true;
      }
  }
