@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
     private GameObject xPosTracker;
     private GameObject yPosTracker;
 
+    public bool GameStart = false;
+    
     private bool shipInMotion = false;
     private bool yBetter = false;
     private bool isAngled = false;
@@ -49,6 +51,8 @@ public class GameManager : MonoBehaviour
     private Vector2 velocity = Vector2.zero;
     private float travelSpeed = 0.3f;
 
+    public bool logOpen = true;
+    
     void Start()
     {
 
@@ -119,6 +123,7 @@ public class GameManager : MonoBehaviour
                 var newStar = Instantiate<GameObject>(nebula);
                 newStar.transform.position = new Vector2(x, y) + gridStartPos + new Vector2(x * xOffset, y * yOffset);
                 newStar.transform.parent = level.transform;
+                newStar.name = "New Star at " + x + " and " + y;
             }
         }
     }
@@ -126,15 +131,21 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (shipInMotion == false)
+        if (GameStart == true)
         {
-            GetNewGridPosition();
-            MoveShipTrigger();
+            if (logOpen == false)
+            {
+                if (shipInMotion == false)
+                {
+                    GetNewGridPosition();
+                    MoveShipTrigger();
             
-        }
-        else
-        {
-            MoveShip();
+                }
+                else
+                {
+                    MoveShip();
+                }
+            }
         }
 
     }

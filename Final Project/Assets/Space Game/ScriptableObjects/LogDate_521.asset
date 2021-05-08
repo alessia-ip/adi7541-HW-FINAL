@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6e273d6f224ca4eb13c9ca57d0eaa6, type: 3}
+  m_Name: LogDate_521
+  m_EditorClassIdentifier: 
+  logNumber: 521
+  logTitle: 'Log Date: 1-M 521'
+  logText: A distress signal has been detected somewhere in this quadrant. I have
+    been tasked with finding any survivors. Easier said than done. First thing's
+    first - figuring out just what star system that signal fizzled out in. NEWLINE
+    NEWLINE NEWLINE(Use the arrow keys to  plan your route, and space to choose your
+    destination)
