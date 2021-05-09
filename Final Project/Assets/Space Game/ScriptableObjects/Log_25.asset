@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 'I have good enough reception today to recieve the transmission of my
+  logText: 'I have good enough reception today to receive the transmission of my
     favourite holonovela. Star-crossed Lovers released their season two finale, and
     I have thus far avoided any spoilers during my travels. It was well worth the
     wait to watch.  '

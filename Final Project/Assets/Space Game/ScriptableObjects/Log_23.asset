@@ -15,5 +15,5 @@ MonoBehaviour:
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
   logText: 'A brief stop in port today revealed that our missing ship passed through
-    here. Their ID was logged with docking staff. I''m on the right track. Unfortuately
+    here. Their ID was logged with docking staff. I''m on the right track. Unfortunately
     it seems their next destination was not added to their file. '
