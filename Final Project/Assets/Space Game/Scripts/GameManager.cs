@@ -64,6 +64,12 @@ public class GameManager : MonoBehaviour
     public LogScriptableObjects lastLogEntry;
 
     public TextMeshProUGUI tripTextTracker;
+
+    [Header("Audio Effects")] 
+    public AudioSource audPlayer;
+    public AudioClip routePlan;
+    public AudioClip shipMove;
+    public AudioClip openLog;
     
     void Start()
     {
@@ -99,8 +105,8 @@ public class GameManager : MonoBehaviour
     void MakeGrid() //this is its own function if we ever need to re-draw the grid
     {
 
-        height = nebulaLayout.GetLength(1);
-        width = nebulaLayout.GetLength(0);
+        height = nebulaLayout.GetLength(1) -1;
+        width = nebulaLayout.GetLength(0) -1;
         
         //Debug.Log("Width: " + width + "\nHeight: " + height);
 
@@ -170,6 +176,7 @@ public class GameManager : MonoBehaviour
             }
         } else if (logOpen == false && tripNum == 0)
         {
+            _lineRenderer.enabled = false;
             Debug.Log("end of game");
         }
 
@@ -189,11 +196,13 @@ public class GameManager : MonoBehaviour
             logCanvas.SetActive(true);
             if (tripNum != 0)
             {
+                playAudioClip(openLog);
                 _LogManager.openLog(nebulaObj.GetComponent<NebulaLog>().logDate);
                 nebulaObj.GetComponent<NebulaLog>().alreadyRead = true;
             }
             else
             {
+                playAudioClip(openLog);
                 _LogManager.openLog(lastLogEntry);
                 nebulaObj.GetComponent<NebulaLog>().alreadyRead = true;
             }
@@ -213,16 +222,17 @@ public class GameManager : MonoBehaviour
             {
 
                 reticlePos.x--;
-
+                playAudioClip(routePlan);
             }
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            if (reticlePos.y < width - 1)
+            if (reticlePos.x < width - 1)
             {
 
                 reticlePos.x++;
+                playAudioClip(routePlan);
 
 
 
@@ -235,6 +245,8 @@ public class GameManager : MonoBehaviour
             {
 
                 reticlePos.y--;
+                //Debug.Log(reticlePos.y);
+                playAudioClip(routePlan);
 
 
 
@@ -246,7 +258,9 @@ public class GameManager : MonoBehaviour
             if (reticlePos.y < height - 1)
             {
                 reticlePos.y++;
-                
+                //Debug.Log(reticlePos.y);
+                playAudioClip(routePlan);
+
             }
         }
 
@@ -300,6 +314,7 @@ public class GameManager : MonoBehaviour
         {
             atTracker = false;
             shipInMotion = true;
+            playAudioClip(shipMove);
 
         }   
     }
@@ -383,25 +398,14 @@ public class GameManager : MonoBehaviour
 
 
     }
-    
-    
-    void pathNodeAdd()
+
+
+    public void playAudioClip(AudioClip clip)
     {
-        if (!pathForShip.Contains(reticlePos))
-        {
-            pathForShip.Add(reticlePos);
-        }
+        audPlayer.PlayOneShot(clip);
     }
 
-    void pathNodeDelete()
-    {
-        if (pathForShip.Contains(reticlePos))
-        {
-            pathForShip.Remove(reticlePos);
-        }
-    }
     
-
     //needed this vector 2 since I was doing this bit of math so often. 
     Vector2 transformedPosition(float xPos, float yPos)
     {

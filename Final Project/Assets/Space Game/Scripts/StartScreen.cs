@@ -21,6 +21,7 @@ public class StartScreen : MonoBehaviour
      public void startthegame()
      {
          start = true;
+         cam.gameObject.GetComponent<AudioSource>().enabled = true;
      }
 
  private void Update()
@@ -37,6 +38,7 @@ public class StartScreen : MonoBehaviour
      
      if (cam.orthographicSize == 26)
      {
+         _gameManager.playAudioClip(_gameManager.openLog);
          logStart.currentLogNumber = 521;
          firstLog.openLog(firstLogSO);
          recordsCanvas.SetActive(true);
