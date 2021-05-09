@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'I have travelled such a distance from my own home that I can no longer
+    see any constellations I can recognize. Understandable, but always jarring to
+    lose constellations like viridianguis, which is always visible when I return
+    home.  '

@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'This trip has been an excellent time to brush up on my vinikos strategies.
+    It is not quite the same playing against the ship as it is a true player, but
+    it provides practice, and I can test out new strategies. Perhaps one of these
+    solar cycles I''ll enter a local tournament. For now, the time spent during planetary
+    jumps can include some downtime for vinikos.  '

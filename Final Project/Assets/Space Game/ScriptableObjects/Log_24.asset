@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'I tried a local delicacy when I landed for a check in today. I had never
+    heard of the fruit until today - nor do I think I can spell it out in this dialect.
+    All I know is I feel incredibly lightheaded, and that I am not in any shape to
+    fly this evening. It was delicious, but I think only the town is immune to its
+    intoxicating effects. Likely due to repeated exposures.  '

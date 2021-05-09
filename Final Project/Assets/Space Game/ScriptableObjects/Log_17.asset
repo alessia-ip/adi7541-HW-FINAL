@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'How many stars exist in the universe? Perhaps we''ll never know. NEWLINE
+    NEWLINE I think I am having an existential crisis today. Long jaunts into space,
+    being in the void of darkness for so long, it never fails to make one feel small.
+    No matter how many stops you make along the way.  '

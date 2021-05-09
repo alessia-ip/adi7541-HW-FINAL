@@ -14,4 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'For a few days, I have been out of action and confined to bed until now.
+    It seems I have come down with my first case of space-sickness in the past five
+    years. The toll travel takes on one''s body is undeniable. I will spare the unsavoury
+    details, but adjusting the pressure and grav simulations seemed to have temporarily
+    aleviated the symptoms, enough for me to be able to land and wait it out. I set
+    out again today to continue my search.  '

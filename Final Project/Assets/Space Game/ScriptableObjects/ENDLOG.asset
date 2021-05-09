@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a6e273d6f224ca4eb13c9ca57d0eaa6, type: 3}
-  m_Name: Log_81
+  m_Name: ENDLOG
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: I've located the missing civilians. They're hungry, and a long way from
+    home, but their ship luckily had crashed on a hospitable planet. They're aboard
+    my ship now, and we'll have them home within the week. Another job well done.
+    On to the next one after this.

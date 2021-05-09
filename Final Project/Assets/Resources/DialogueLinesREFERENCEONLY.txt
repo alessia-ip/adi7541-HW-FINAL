@@ -2,6 +2,8 @@ A distress signal has been detected somewhere in this quadrant. I have been task
 
 ------
 
+No life in this system. It's a dead end. NEWLINE NEWLINE No sign of debris either.
+
 0
 No signs of the distress signal here. However, there is a very nice tropical beach planet. NEWLINE NEWLINE I'll have to keep that in mind for when I next get a vacation. NEWLINE NEWLINE There's always more work to be done. But delta-five-five-three is a close enough location to acquire a temporary clearance for a visitor permit, surely. 
 
@@ -122,4 +124,4 @@ Today is just one of those days. The sort where it's hard to pull yourself out o
 39
 Long trips like this one during work are a good time to catch up on reading, with so much of it spent following marked starlane paths. 
 
-40
+

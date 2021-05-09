@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'With a tether on the ship, I  investigated a wreck that floated by. The
+    ID does not match the one I was searching for. NEWLINE NEWLINE It may be time
+    to invest in a new suit however. I could feel the pressure outside of the ship
+    more strongly than usual, and the lack of such strong regulation irritated my
+    eyes.   '

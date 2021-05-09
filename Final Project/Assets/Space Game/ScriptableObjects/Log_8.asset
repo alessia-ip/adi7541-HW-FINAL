@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: This system's at too high a temperature to safely explore. The blue dwarf
+    star at it's center is at the end of it's life, and is searingly hot. Even at
+    the edge of the system, the thermal controls for the ship are having difficulties
+    regulating the temperature.

@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'This system is out of our jurisdiction. I have been denied entry to check
+    for the call. If our folks are there, we won''t find them.  '

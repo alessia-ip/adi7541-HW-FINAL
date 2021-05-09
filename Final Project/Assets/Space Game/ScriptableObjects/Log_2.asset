@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: The ship here is not the one we were looking for. Instead, I seem to have
-    come across a luxury yacht starline cruiser. NEWLINE NEWLINE Very large. Very
-    sturdy. Not as nimble as mine though. I'll stick with what I've got.
+  logText: 'The ship here is not the one we were looking for. Instead, I seem to
+    have come across a luxury yacht starline cruiser. NEWLINE NEWLINE Very large.
+    Very sturdy. Not as nimble as mine though. I''ll stick with what I''ve got. NEWLINEW
+    NEWLINE With that said, they did permit me to dock for suplies. For a fee, of
+    course. But they had these tiny chocolates from gamma-epsilon-six. Can''t get
+    them anywhere else usually, and they''re absolutely worth it.  '

@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'The coordinates for this star system seem to have been in error. There''s
+    nothing here. NEWLINE NEWLINE Perhaps it''s from an old starmap, and the coordinates
+    were never migrated if it was pulled out of place. Or perhaps it just no longer
+    exists.  '

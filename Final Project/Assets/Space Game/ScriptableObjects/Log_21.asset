@@ -14,4 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'Another day, another breakdown. Today it was not the ship, but my translator
+    that has malfunctioned. It is a crucial device in this line of work - there is
+    no feasible way to learn the thousands and languages and dialects that span all
+    the star systems one could possibly visit. Language barriers are quite a difficult
+    feat to overcome, even within planets within two lightyears of one another. Two
+    languages might be called the same thing, but be split into different, vastly
+    different dialects if they have been split for too long.  '

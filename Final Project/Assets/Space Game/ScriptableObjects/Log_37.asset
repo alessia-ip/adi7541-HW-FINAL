@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'I''m out of leads. I need to find a connection sometime today and follow
+    up with the boss for more direction on this search op.  '

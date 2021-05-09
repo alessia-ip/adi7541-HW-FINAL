@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
 using System.Numerics;
+using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -14,7 +15,7 @@ public class GameManager : MonoBehaviour
 {
 
     [Header("Saving and Loading")]
-    private const string FILEPATH_nebulaLayout = "NebulaLayout";
+    private const string FILEPATH_nebulaLayout = "NebulaLayout1";
     private TextAsset DATA_nebulaLayout;
     public char[,] nebulaLayout;
 
@@ -57,6 +58,12 @@ public class GameManager : MonoBehaviour
     public GameObject logCanvas;
     
     public List<LogScriptableObjects> listOfAllLogs;
+
+    private int tripNum = 10;
+
+    public LogScriptableObjects lastLogEntry;
+
+    public TextMeshProUGUI tripTextTracker;
     
     void Start()
     {
@@ -70,7 +77,7 @@ public class GameManager : MonoBehaviour
             var tempLayout = DATA_nebulaLayout.text;
             // Debug.Log(tempLayout.ToCharArray().Length); - note, a char array keeps the newline characters
             var nebulaStrings = tempLayout.Split('\n');
-            for (int y = 0; y < nebulaStrings.Length; y++) // we are getting the y coords from the number of lines in the array
+            for (int y = 0; y < nebulaStrings.Length - 1; y++) // we are getting the y coords from the number of lines in the array
             {
                 var currentLine = nebulaStrings[y].ToCharArray();
                 if (nebulaLayout == null)
@@ -100,9 +107,9 @@ public class GameManager : MonoBehaviour
         var level = new GameObject();
         level.name = "Level";
         
-        for (int y = 0; y < nebulaLayout.GetLength(1); y++)
+        for (int y = 0; y < nebulaLayout.GetLength(1) -1 ; y++)
         {
-            for (int x = 0; x < nebulaLayout.GetLength(0); x++)
+            for (int x = 0; x < nebulaLayout.GetLength(0) -1; x++)
             {
                 var newStar = Instantiate<GameObject>(nebula);
                 newStar.transform.position = new Vector2(x, y) + gridStartPos + new Vector2(x * xOffset, y * yOffset);
@@ -146,7 +153,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (GameStart == true)
+        if (GameStart == true && tripNum != 0)
         {
             if (logOpen == false)
             {
@@ -161,6 +168,9 @@ public class GameManager : MonoBehaviour
                     MoveShip();
                 }
             }
+        } else if (logOpen == false && tripNum == 0)
+        {
+            Debug.Log("end of game");
         }
 
     }
@@ -173,10 +183,20 @@ public class GameManager : MonoBehaviour
         Debug.Log(nebulaObj.transform.position);
         if (nebulaObj.GetComponent<NebulaLog>().alreadyRead == false)
         {
+            tripNum--;
+            tripTextTracker.text = "Trips remaining: " + tripNum;
             logOpen = true;
             logCanvas.SetActive(true);
-            _LogManager.openLog(nebulaObj.GetComponent<NebulaLog>().logDate);
-            nebulaObj.GetComponent<NebulaLog>().alreadyRead = true;
+            if (tripNum != 0)
+            {
+                _LogManager.openLog(nebulaObj.GetComponent<NebulaLog>().logDate);
+                nebulaObj.GetComponent<NebulaLog>().alreadyRead = true;
+            }
+            else
+            {
+                _LogManager.openLog(lastLogEntry);
+                nebulaObj.GetComponent<NebulaLog>().alreadyRead = true;
+            }
         }
         
     }

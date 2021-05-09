@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'Two words: space jam. In this case, the galaxy famous vivi jam. I was
+    able to snag a jar of it, and I regret it already. It''s far too good and now
+    I need to stock up on more. More than I can likely fit inside my ship.  '

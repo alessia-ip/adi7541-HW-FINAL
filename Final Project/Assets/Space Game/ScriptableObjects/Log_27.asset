@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'Upon visiting the home-planet of the missing ship''s crew, I picked up
+    no useful information. I did pick up an infestation of bubble beetles. I''ll
+    be cleaning wing slick off of the walls for weeks.  '

@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'I''m off my usual schedule. A clock doesn''t combat the constant darkness,
+    and unfortunately, it makes keeping a consistent sleep-wake schedule difficult
+    during long missions such as this one.  '

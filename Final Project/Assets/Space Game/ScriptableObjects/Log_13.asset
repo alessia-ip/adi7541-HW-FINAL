@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: Still no sign of the missing ship or its crew. There is a much older wreck
+    in this system, overrun by what have been affectionately dubbed metal-mites.
+    Less affectionately is recognizing the damage they do. They'll chew holes in
+    a hull in a manner of days, and I have no intention of becoming the next victim
+    of this infestation.

@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'There''s a new popular game that has been circulating around the star-net.
+    It is similar to the universal drinking game involving beers and a ping-pong
+    ball, but requires turning off the grav system temporarily. It is much more difficult
+    to try and float the ball into a cup in as few actions as possible. And without
+    knocking over the cup.  '

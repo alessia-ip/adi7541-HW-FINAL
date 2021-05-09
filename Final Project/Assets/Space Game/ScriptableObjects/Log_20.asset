@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'In my flythrough of zeta-rho-seven, I have submitted an adjustment report
+    to S.O.L.A.S. - the Solar Observations Log And Survey division. One of the moons
+    in this system has drifted away from it''s twin, and away from the planet it
+    had previously orbitted. The trajectory could become problematic for civilian
+    shuttles that pass through this way in the future.  '

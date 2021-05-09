@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: I took a pitstop to refuel here on planet T-12-L and do maintenance. The
+    port here seems to be known for its handicrafts using a rare lavender mineral
+    that is found on this planet. NEWLINE NEWLINE It does not help my search, but
+    I now have a set of matching earrings made from the metal.

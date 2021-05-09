@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'I am temporarily stranded on F-14-X. Not due to any malfunction, or even
+    permits, but due to the festival they have at present. The bird population makes
+    a migration and sheds pink feathers that rain from the sky at this time of year.
+    Thus, no ships are permitted to travel on or off planet until the festival is
+    over.  '

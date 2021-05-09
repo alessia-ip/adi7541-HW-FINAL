@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'Today is just one of those days. The sort where it''s hard to pull yourself
+    out of bed and be productive. I have to do my work. But no proper log today.  '

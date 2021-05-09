@@ -14,4 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: I am regretting my choice of entertainment for this voyage. There is only
+    so many times I can listen to the same song on one trip. For later reference,
+    said song is 'Starlight Aurora' by Galactic Treble. NEWLINE NEWLINE It's a very
+    good song, but I will need a couple months before I can listen to this again.
+    For now, I will resort to radio frequencies at various outposts. It is a hit
+    or miss experience. Right now, the outpost is playing what can only be described
+    as a crunkcore with antique stylophones. Someone must enjoy this music, but it
+    isn't for me. I'll stick to 'Starlight Aurora'.

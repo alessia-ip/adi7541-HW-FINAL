@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'I believe I have started to pace a trench into the vibrasteel flooring
+    of my ship. It is a thought that often crosses my mind. Exercise is easy to do
+    on a larger ship, but in one such as this I have to make do with pacing the length
+    of the hall during my downtime, and do chinups in the doorframe. NEWLINE NEWLINE
+    And I hate chinups.  '

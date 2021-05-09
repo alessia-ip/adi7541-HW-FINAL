@@ -14,4 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: I needed some extra help upon reaching Sigma-Six. It's meteor season here,
+    and my hull was clipped by one that I misjudged the trajectory of. It seems I
+    have acquired a bot because of it. Initially I intended only to hire the bot
+    to perform the necessary duties, but they've proven very useful, technically
+    skilled, and are sufficiently witty. I can't say I mind the sass, so they are
+    now a permanent memeber of my ship crew.

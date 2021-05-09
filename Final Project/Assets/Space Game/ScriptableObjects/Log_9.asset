@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'I''ve made a temporary detour in Beta-Five-Five. The hypergiant star
+    in this system is extremely bright, but on planet Z-X-7, they will be experiencing
+    the first lunar eclipse in two centuries, and it''s reported to be a must-see
+    sight. '

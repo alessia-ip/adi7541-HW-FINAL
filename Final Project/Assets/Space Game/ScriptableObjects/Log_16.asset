@@ -14,4 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'This week it was necessary to restock my rations. They aren''t made the
+    same everywhere in this quadrant, and the batch I picked up is particularly bad,
+    unfortunately. Even rehydrated, these rations have the texture of soggy styrofoam
+    mixed with zillian bean pudding, but with no taste whatsoever except the liquid
+    they''ve been rehydrated in. An adequate source of nurtients and nourishment,
+    but my tongue has never been more unhappy.  '

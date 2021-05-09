@@ -14,4 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 
+  logText: 'This is the first place I can get a signal to home from. It would make
+    sense we could have seen a distress signal from here, but no luck. NEWLINE NEWLINE
+    I had good enough reception to call my parents from here though. They''re both
+    well, and I let them know that I will be bringing them back a little surprise.
+    What they don''t know is that it''s a vintage of belladona lace wine - the same
+    vintage and kind as the one they had at their wedding. I may not be back until
+    after their solarversus day, but I hope they like it anyways.  '
