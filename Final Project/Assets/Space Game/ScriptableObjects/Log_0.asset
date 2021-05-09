@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: 'I''ve had a malfunction while near the outer moon. Seems this system
-    has peculiar magnetic fluctuations. I''ve wasted a day and a half on repairs
+  logText: 'I''ve had a malfunction while near the outer moon. NEWLINE It seems this
+    system has peculiar magnetic fluctuations. I''ve wasted a day and a half on repairs
     before the sub-light engine was working again. NEWLINE NEWLINE Doing one loop
     around the system for good measure, there is nothing of note. There''s a small
     mining colony on one of the inner moons, around planet V-V-Four, but they report

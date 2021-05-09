@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logNumber: {fileID: 11400000, guid: b04282a3bf3751147908c4ff98c1bde3, type: 2}
   logTitle: 'Log Date: 1-M NUM'
-  logText: No signs of the distress signal here. However, there is a very nice tropical
-    beach planet. NEWLINE NEWLINE I'll have to keep that in mind for when I next
-    get a vacation.
+  logText: No signs of the distress signal here. NEWLINE However, there is a very
+    nice tropical beach planet. NEWLINE NEWLINE I'll have to keep that in mind for
+    when I next get a vacation.
