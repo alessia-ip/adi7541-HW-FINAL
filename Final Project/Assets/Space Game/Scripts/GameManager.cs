@@ -65,6 +65,8 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI tripTextTracker;
 
+    public GameObject success;
+    
     [Header("Audio Effects")] 
     public AudioSource audPlayer;
     public AudioClip routePlan;
@@ -412,5 +414,14 @@ public class GameManager : MonoBehaviour
         var newVector2 = new Vector2(xPos, yPos) + gridStartPos + new Vector2(xPos * xOffset, yPos * yOffset);
         return newVector2;
     }
+
+    public void checkSuccess()
+    {
+        if (tripNum == 0)
+        {
+            success.SetActive(true);
+        }
+    }
+    
     
 }
